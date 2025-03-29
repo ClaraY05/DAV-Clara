@@ -25,16 +25,18 @@ module miniALU (
         // TODO: write the logic for your miniALU here
         if(operation)begin // if add or subtract
             if(sign)begin // if subtract
+                result = op1 >> op2;
             end
             else begin  // otherwise add
-
+                result = op1 << op2;
             end
         end
         else begin // otherwise left or right shift
-            if(sign)begin // if right shift
+            if(sign)begin // if right 
+                result = op1 - op2;
             end
             else begin  // otherwise left shift
-
+                result = op1 + op2;
             end
         end
     end
